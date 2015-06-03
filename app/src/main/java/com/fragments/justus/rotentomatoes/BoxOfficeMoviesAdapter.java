@@ -38,7 +38,15 @@ public class BoxOfficeMoviesAdapter extends ArrayAdapter<BoxOfficeMovie> {
         // Populate the data into the template view using the data object
         tvTitle.setText(movie.getTitle());
         tvCriticsScore.setText("Score: " + movie.getCriticsScore() + "%");
-        tvCast.setText((CharSequence) movie.getCastList());
+
+        String listString = "";
+
+        for (String s : movie.getCastList())
+        {
+            listString += s + "\t";
+        }
+
+        tvCast.setText( listString );
         Picasso.with(getContext()).load(movie.getPosterUrl()).into(ivPosterImage);
         // Return the completed view to render on screen
         return convertView;
