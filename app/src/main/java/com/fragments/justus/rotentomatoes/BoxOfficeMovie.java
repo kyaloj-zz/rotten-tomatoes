@@ -4,12 +4,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by justus on 6/3/15.
  */
-public class BoxOfficeMovie {
+public class BoxOfficeMovie implements Serializable {
+
+    private static final long serialVersionUID = -8959832007991513854L;
+    private String largePosterUrl;
+    private String criticsConsensus;
+    private int audienceScore;
     private String title;
     private int year;
     private String synopsis;
@@ -41,10 +47,25 @@ public class BoxOfficeMovie {
         return castList;
     }
 
+    public String getLargePosterUrl() {
+        return largePosterUrl;
+    }
+
+    public String getCriticsConsensus() {
+        return criticsConsensus;
+    }
+
+    public int getAudienceScore() {
+        return audienceScore;
+    }
+
     public static BoxOfficeMovie fromJson(JSONObject jsonObject) {
         BoxOfficeMovie b = new BoxOfficeMovie();
         try {
             // Deserialize json into object fields
+            b.largePosterUrl = jsonObject.getJSONObject("posters").getString("detailed");
+            b.criticsConsensus = jsonObject.getString("critics_consensus");
+            b.audienceScore = jsonObject.getJSONObject("ratings").getInt("audience_score");
             b.title = jsonObject.getString("title");
             b.year = jsonObject.getInt("year");
             b.synopsis = jsonObject.getString("synopsis");
