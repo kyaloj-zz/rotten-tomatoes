@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onItemClick(AdapterView<?> adapterView, View item, int position, long rowId) {
                 // Launch the detail view passing movie as an extra
-                Intent i = new Intent(MainActivity.this, BoxOfficeDetailActivity.class);
+                Intent i = new Intent(MainActivity.this, MovieDetails.class);
                 i.putExtra(MOVIE_DETAIL_KEY, adapterMovies.getItem(position));
                 startActivity(i);
             }

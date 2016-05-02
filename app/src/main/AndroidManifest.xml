@@ -20,9 +20,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BoxOfficeDetailActivity"
-            android:label="@string/title_activity_box_office_detail"></activity>
-
+            android:name=".MovieDetails"
+            android:label="@string/title_activity_movie_details"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fragments.justus.rotentomatoes.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
