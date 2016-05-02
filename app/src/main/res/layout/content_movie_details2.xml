@@ -40,7 +40,6 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
-                        android:maxHeight="160dp"
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
                         android:src="@drawable/large_movie_poster" />
@@ -59,7 +58,6 @@
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/ivPosterImage"
                         android:textStyle="bold"
-                        android:layout_marginLeft="8dp"
                         android:layout_toRightOf="@+id/ivPosterImage"
                         android:text="The Dark Knight"
                         android:textSize="18sp" />
