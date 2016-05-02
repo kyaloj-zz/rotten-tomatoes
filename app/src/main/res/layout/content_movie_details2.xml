@@ -29,25 +29,21 @@
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:id="@+id/ivPosterImage"
+                    android:layout_width="0dip"
+                    android:layout_weight="30"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/large_movie_poster" />
+
+
                 <LinearLayout
                     android:layout_width="0dip"
-                    android:layout_weight="50"
-
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:id="@+id/ivPosterImage"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:scaleType="fitXY"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/large_movie_poster" />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dip"
-                    android:layout_weight="50"
+                    android:layout_weight="70"
                     android:orientation="vertical"
                     android:paddingLeft="@dimen/activity_vertical_margin"
                     android:layout_height="wrap_content">
@@ -56,9 +52,7 @@
                         android:id="@+id/tvTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/ivPosterImage"
                         android:textStyle="bold"
-                        android:layout_toRightOf="@+id/ivPosterImage"
                         android:text="The Dark Knight"
                         android:textSize="18sp" />
 
@@ -66,8 +60,6 @@
                         android:id="@+id/tvCriticsScore"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/tvTitle"
-                        android:layout_below="@+id/tvTitle"
                         android:layout_marginTop="5dp"
                         android:text="Critics Score: 93%"
                         android:textSize="14sp" />
@@ -76,8 +68,6 @@
                         android:id="@+id/tvAudienceScore"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/tvCriticsScore"
-                        android:layout_below="@+id/tvCriticsScore"
                         android:layout_marginTop="5dp"
                         android:text="Audience Score: 93%"
                         android:textSize="14sp" />
@@ -86,8 +76,6 @@
                         android:id="@+id/tvCast"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/tvAudienceScore"
-                        android:layout_below="@+id/tvAudienceScore"
                         android:layout_marginTop="5dp"
                         android:text="Christian Bale, Joseph-Gordon Levitt"
                         android:textSize="12sp" />
